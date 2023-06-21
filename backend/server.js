@@ -15,6 +15,7 @@ import uploadRoutes from './routes/uploadRoutes.js';
 
 
 dotenv.config();
+
 connectDB();
 
 
@@ -22,16 +23,6 @@ connectDB();
 const app = express();
 
 app.use(express.json());  //we need to say to express to parse it from JSON - body parsing
-
-
-
-// creating routes
-
-app.get('/', (req, res) => 
-{
-    res.send('API IS RUNNING');
-
-});
 
 
 
@@ -80,6 +71,10 @@ app.listen(PORT, ()=>{
 
 
 
+
+
+
+
 // Node Common JS Syntax to import
 
 // const express = require('express');  
@@ -100,4 +95,13 @@ app.listen(PORT, ()=>{
 // app.get('/api/products/:id', (req, res) => {
 //     const product = products.find((prod)=> prod._id === req.params.id);
 //     res.json(product);
+// });
+
+
+// creating routes
+
+// app.get('/', (req, res) => 
+// {
+//     res.send('API IS RUNNING');
+
 // });
